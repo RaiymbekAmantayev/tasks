@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+<!--  -->
+{% block title %}
+<!--  -->
+my recs
+<!--  -->
+{% endblock title %}
+<!--  -->
+
+{% block content %}
+<!--  -->
+{% if my_recs %}
+<!--  -->
+
+<h1>My recommendations:</h1>
+<ul>
+    {% for p in my_recs%}
+    <li>{{p.user}}</li>
+    <li>{{p.phone}}</li>
+    {%endfor%}
+    <!--  -->
+</ul>
+<!--  -->
+
+{%else%}
+<!--  -->
+<h1> you didnt recommended</h1>
+<!--  -->
+{%endif%}
+<!--  -->
+{% endblock content %}
